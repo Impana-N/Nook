@@ -7,14 +7,11 @@ function MoodCard({ mood }) {
   return (
     <button
       onClick={() => navigate(`/map/${mood.id}`)}
-      className={`mood-card bg-gradient-br ${mood.gradient} text-white shadow-lg w-full text-left`}
-      style={{
-        background: `linear-gradient(135deg, ${mood.gradient.replace('from-', '').replace('to-', '').split(' ').filter(Boolean).join(', ')})`,
-      }}
+      className="bg-white rounded-2xl px-4 py-3.5 shadow-md w-full text-left hover:shadow-lg transition-shadow duration-200"
     >
-      <div className="text-3xl mb-3">{mood.emoji}</div>
-      <h2 className="text-lg font-semibold mb-1">{mood.title}</h2>
-      <p className="text-sm opacity-80">{mood.subtitle}</p>
+      <div className="text-3xl mb-2">{mood.emoji}</div>
+      <h2 className="text-lg font-semibold text-forest mb-0.5">{mood.title}</h2>
+      <p className="text-sm" style={{ color: '#555555' }}>{mood.subtitle}</p>
     </button>
   )
 }
