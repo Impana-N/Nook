@@ -26,7 +26,7 @@ export default function Home() {
         <div className="text-center mb-10">
           <div className="text-5xl mb-4">🪹</div>
           <h1 className="text-3xl font-bold text-forest mb-2">Nook</h1>
-          <p className="text-deep/60 text-sm leading-relaxed max-w-xs mx-auto">
+          <p className="text-deep text-sm leading-relaxed max-w-xs mx-auto">
             Find your place, however you feel.
             Pick a mood and discover Bangalore's best third places.
           </p>
@@ -38,7 +38,7 @@ export default function Home() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-deep/40 mt-8">
+        <p className="text-center text-xs text-deep/85 mt-8">
           No login needed. Just you and where you need to be.
         </p>
       </div>
