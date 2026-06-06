@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-soft text-deep font-sans antialiased;
+  }
+
+  * {
+    @apply border-deep/10;
+  }
+}
+
+@layer components {
+  .mood-card {
+    @apply relative overflow-hidden rounded-2xl p-5 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .mood-card:hover {
+    @apply -translate-y-0.5;
+  }
+
+  .mood-card::after {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+  }
+
+  .mood-card:hover::after {
+    @apply opacity-100;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md rounded-2xl shadow-sm border border-white/50;
+  }
+
+  .vibe-tag {
+    @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-soft text-forest;
+  }
+
+  .btn-primary {
+    @apply w-full py-3.5 rounded-xl font-medium text-white bg-forest hover:bg-deep transition-colors duration-200 text-center;
+  }
+
+  .leaflet-container {
+    @apply w-full h-full;
+    z-index: 0;
+  }
+
+  .custom-popup .leaflet-popup-content-wrapper {
+    @apply rounded-xl shadow-lg border border-white/50;
+  }
+
+  .custom-popup .leaflet-popup-content {
+    @apply m-3 text-sm font-medium text-deep;
+  }
+
+  .custom-popup .leaflet-popup-tip {
+    @apply shadow-none;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
